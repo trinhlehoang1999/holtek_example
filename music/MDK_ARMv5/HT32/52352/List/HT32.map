@@ -1,0 +1,1470 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.Buzzer_Fun1) refers to buzzer_pwm.o(i.Buzzer_Init) for Buzzer_Init
+    main.o(i.Buzzer_Fun1) refers to buzzer_pwm.o(i.Buzzer_Start) for Buzzer_Start
+    main.o(i.Buzzer_Fun1) refers to buzzer_pwm.o(i.Buzzer_IsFinish) for Buzzer_IsFinish
+    main.o(i.Buzzer_Fun2) refers to buzzer_pwm.o(i.Buzzer_Init) for Buzzer_Init
+    main.o(i.Buzzer_Fun2) refers to buzzer_pwm.o(i.Buzzer_Start) for Buzzer_Start
+    main.o(i.Buzzer_Fun2) refers to buzzer_pwm.o(i.Buzzer_IsFinish) for Buzzer_IsFinish
+    main.o(i.Buzzer_PlayTable) refers to buzzer_pwm.o(i.Buzzer_IsFinish) for Buzzer_IsFinish
+    main.o(i.Buzzer_PlayTable) refers to buzzer_pwm.o(i.Buzzer_Start) for Buzzer_Start
+    main.o(i.Buzzer_PlayTable) refers to main.o(.data) for .data
+    main.o(i.Delay) refers to ht32_cm0plus_misc.o(i.SYSTICK_CounterCmd) for SYSTICK_CounterCmd
+    main.o(i.Delay) refers to main.o(.data) for .data
+    main.o(i.SysTick_Handler) refers to main.o(i.TimingDelay) for TimingDelay
+    main.o(i.TimingDelay) refers to main.o(.data) for .data
+    main.o(i.main) refers to main.o(i.Buzzer_Fun2) for Buzzer_Fun2
+    main.o(i.main) refers to buzzer_pwm.o(i.Buzzer_Init) for Buzzer_Init
+    main.o(i.main) refers to ht32_cm0plus_misc.o(i.SYSTICK_ClockSourceConfig) for SYSTICK_ClockSourceConfig
+    main.o(i.main) refers to uidiv.o(.text) for __aeabi_uidivmod
+    main.o(i.main) refers to ht32_cm0plus_misc.o(i.SYSTICK_SetReloadValue) for SYSTICK_SetReloadValue
+    main.o(i.main) refers to ht32_cm0plus_misc.o(i.SYSTICK_IntConfig) for SYSTICK_IntConfig
+    main.o(i.main) refers to main.o(i.music_2) for music_2
+    main.o(i.main) refers to main.o(i.music) for music
+    main.o(i.main) refers to system_ht32f5xxxx_01.o(.data) for SystemCoreClock
+    main.o(i.music) refers to idiv.o(.text) for __aeabi_idivmod
+    main.o(i.music) refers to dflti.o(.text) for __aeabi_i2d
+    main.o(i.music) refers to dmul.o(.text) for __aeabi_dmul
+    main.o(i.music) refers to dfixi.o(.text) for __aeabi_d2iz
+    main.o(i.music) refers to dfixui.o(.text) for __aeabi_d2uiz
+    main.o(i.music) refers to buzzer_pwm.o(i.Buzzer_Start) for Buzzer_Start
+    main.o(i.music) refers to main.o(i.Delay) for Delay
+    main.o(i.music) refers to main.o(.data) for .data
+    main.o(i.music_2) refers to idiv.o(.text) for __aeabi_idivmod
+    main.o(i.music_2) refers to dflti.o(.text) for __aeabi_i2d
+    main.o(i.music_2) refers to dmul.o(.text) for __aeabi_dmul
+    main.o(i.music_2) refers to dfixi.o(.text) for __aeabi_d2iz
+    main.o(i.music_2) refers to dfixui.o(.text) for __aeabi_d2uiz
+    main.o(i.music_2) refers to buzzer_pwm.o(i.Buzzer_Start) for Buzzer_Start
+    main.o(i.music_2) refers to main.o(i.Delay) for Delay
+    main.o(i.music_2) refers to main.o(.data) for .data
+    ht32f5xxxx_01_it.o(i.HardFault_Handler) refers to ht32f5xxxx_01_it.o(.data) for .data
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    buzzer_pwm.o(i.Buzzer_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_tm.o(i.TM_TimeBaseInit) for TM_TimeBaseInit
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_tm.o(i.TM_ClearFlag) for TM_ClearFlag
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_tm.o(i.TM_OutputInit) for TM_OutputInit
+    buzzer_pwm.o(i.Buzzer_Init) refers to ht32f5xxxx_mctm.o(i.MCTM_CHMOECmd) for MCTM_CHMOECmd
+    buzzer_pwm.o(i.Buzzer_IsFinish) refers to buzzer_pwm.o(.data) for .data
+    buzzer_pwm.o(i.Buzzer_Start) refers to uidiv.o(.text) for __aeabi_uidivmod
+    buzzer_pwm.o(i.Buzzer_Start) refers to idiv.o(.text) for __aeabi_idivmod
+    buzzer_pwm.o(i.Buzzer_Start) refers to ht32f5xxxx_tm.o(i.TM_SetCounterReload) for TM_SetCounterReload
+    buzzer_pwm.o(i.Buzzer_Start) refers to ht32f5xxxx_tm.o(i.TM_SetCaptureCompare) for TM_SetCaptureCompare
+    buzzer_pwm.o(i.Buzzer_Start) refers to ht32f5xxxx_tm.o(i.TM_IntConfig) for TM_IntConfig
+    buzzer_pwm.o(i.Buzzer_Start) refers to ht32f5xxxx_tm.o(i.TM_ChannelConfig) for TM_ChannelConfig
+    buzzer_pwm.o(i.Buzzer_Start) refers to ht32f5xxxx_tm.o(i.TM_Cmd) for TM_Cmd
+    buzzer_pwm.o(i.Buzzer_Start) refers to buzzer_pwm.o(.data) for .data
+    buzzer_pwm.o(i.MCTM0_IRQHandler) refers to ht32f5xxxx_tm.o(i.TM_ClearFlag) for TM_ClearFlag
+    buzzer_pwm.o(i.MCTM0_IRQHandler) refers to ht32f5xxxx_tm.o(i.TM_ChannelConfig) for TM_ChannelConfig
+    buzzer_pwm.o(i.MCTM0_IRQHandler) refers to ht32f5xxxx_tm.o(i.TM_Cmd) for TM_Cmd
+    buzzer_pwm.o(i.MCTM0_IRQHandler) refers to buzzer_pwm.o(.data) for .data
+    system_ht32f5xxxx_01.o(i.SystemCoreClockUpdate) refers to system_ht32f5xxxx_01.o(.data) for .data
+    startup_ht32f5xxxx_01.o(RESET) refers to startup_ht32f5xxxx_01.o(STACK) for __initial_sp
+    startup_ht32f5xxxx_01.o(RESET) refers to ht32f5xxxx_01_it.o(i.NMI_Handler) for NMI_Handler
+    startup_ht32f5xxxx_01.o(RESET) refers to ht32f5xxxx_01_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_ht32f5xxxx_01.o(RESET) refers to ht32f5xxxx_01_it.o(i.SVC_Handler) for SVC_Handler
+    startup_ht32f5xxxx_01.o(RESET) refers to ht32f5xxxx_01_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_ht32f5xxxx_01.o(RESET) refers to main.o(i.SysTick_Handler) for SysTick_Handler
+    startup_ht32f5xxxx_01.o(RESET) refers to buzzer_pwm.o(i.MCTM0_IRQHandler) for MCTM0_IRQHandler
+    startup_ht32f5xxxx_01.o(RESET) refers to system_ht32f5xxxx_01.o(i.SystemInit) for SystemInit
+    startup_ht32f5xxxx_01.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    ht32_usbd_core.o(i.USBDCore_GetStatus) refers to ht32_usbd_core.o(.data) for .data
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_GetINT) for USBD_GetINT
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_ClearINT) for USBD_ClearINT
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_PowerOff) for USBD_PowerOff
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_DeInit) for USBD_DeInit
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_PowerOn) for USBD_PowerOn
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EPTInit) for USBD_EPTInit
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EnableINT) for USBD_EnableINT
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetINT) for USBD_EPTGetINT
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_ReadSETUPData) for USBD_ReadSETUPData
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32_usbd_core.o(i._USBDCore_Setup) for _USBDCore_Setup
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EPTClearINT) for USBD_EPTClearINT
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32_usbd_core.o(i._USBDCore_ControlIN) for _USBDCore_ControlIN
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EPTReadOUTData) for USBD_EPTReadOUTData
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) for USBD_EPTWriteINData
+    ht32_usbd_core.o(i.USBDCore_IRQHandler) refers to ht32f5xxxx_usbd.o(i.USBD_GetEPTnINTNumber) for USBD_GetEPTnINTNumber
+    ht32_usbd_core.o(i.USBDCore_Init) refers to ht32f5xxxx_usbd.o(i.USBD_Init) for USBD_Init
+    ht32_usbd_core.o(i.USBDCore_Init) refers to ht32_usbd_core.o(.data) for .data
+    ht32_usbd_core.o(i.USBDCore_MainRoutine) refers to ht32f5xxxx_usbd.o(i.USBD_PowerUp) for USBD_PowerUp
+    ht32_usbd_core.o(i.USBDCore_TriggerRemoteWakeup) refers to ht32f5xxxx_usbd.o(i.USBD_PowerOn) for USBD_PowerOn
+    ht32_usbd_core.o(i.USBDCore_TriggerRemoteWakeup) refers to ht32f5xxxx_usbd.o(i.USBD_RemoteWakeup) for USBD_RemoteWakeup
+    ht32_usbd_core.o(i._USBDCore_ControlIN) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBufferLen) for USBD_EPTGetBufferLen
+    ht32_usbd_core.o(i._USBDCore_ControlIN) refers to ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) for USBD_EPTWriteINData
+    ht32_usbd_core.o(i._USBDCore_Setup) refers to ht32_usbd_core.o(i._USBDCore_Standard_Request) for _USBDCore_Standard_Request
+    ht32_usbd_core.o(i._USBDCore_Setup) refers to ht32f5xxxx_usbd.o(i.USBD_EPTSendSTALL) for USBD_EPTSendSTALL
+    ht32_usbd_core.o(i._USBDCore_Setup) refers to ht32_usbd_core.o(i._USBDCore_ControlIN) for _USBDCore_ControlIN
+    ht32_usbd_core.o(i._USBDCore_Setup) refers to ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) for USBD_EPTWriteINData
+    ht32_usbd_core.o(i._USBDCore_Standard_GetStatus) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetHalt) for USBD_EPTGetHalt
+    ht32_usbd_core.o(i._USBDCore_Standard_Request) refers to ht32_usbd_core.o(i._USBDCore_Standard_GetStatus) for _USBDCore_Standard_GetStatus
+    ht32_usbd_core.o(i._USBDCore_Standard_Request) refers to ht32_usbd_core.o(i._USBDCore_Standard_SetClearFeature) for _USBDCore_Standard_SetClearFeature
+    ht32_usbd_core.o(i._USBDCore_Standard_Request) refers to ht32f5xxxx_usbd.o(i.USBD_SetAddress) for USBD_SetAddress
+    ht32_usbd_core.o(i._USBDCore_Standard_Request) refers to ht32f5xxxx_usbd.o(i.USBD_EPTInit) for USBD_EPTInit
+    ht32_usbd_core.o(i._USBDCore_Standard_SetClearFeature) refers to ht32f5xxxx_usbd.o(i.USBD_EPTSetHalt) for USBD_EPTSetHalt
+    ht32_usbd_core.o(i._USBDCore_Standard_SetClearFeature) refers to ht32f5xxxx_usbd.o(i.USBD_EPTClearHalt) for USBD_EPTClearHalt
+    ht32_usbd_core.o(i._USBDCore_Standard_SetClearFeature) refers to ht32f5xxxx_usbd.o(i.USBD_EPTClearDTG) for USBD_EPTClearDTG
+    ht32_cm0plus_misc.o(i.DIV32_Init) refers to ht32_cm0plus_misc.o(.data) for .data
+    ht32_cm0plus_misc.o(i.Rand_Init) refers to ht32_cm0plus_misc.o(.constdata) for .constdata
+    ht32_cm0plus_misc.o(i.Rand_Init) refers to ht32_cm0plus_misc.o(.data) for .data
+    ht32f5xxxx_adc.o(i.ADC_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_bftm.o(i.BFTM_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_ckcu.o(i.CKCU_DeInit) refers to ht32f5xxxx_ckcu.o(i.CKCU_HSICmd) for CKCU_HSICmd
+    ht32f5xxxx_ckcu.o(i.CKCU_DeInit) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetClockReadyStatus) for CKCU_GetClockReadyStatus
+    ht32f5xxxx_ckcu.o(i.CKCU_DeInit) refers to ht32f5xxxx_ckcu.o(i.CKCU_SysClockConfig) for CKCU_SysClockConfig
+    ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetPLLFrequency) for CKCU_GetPLLFrequency
+    ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency) refers to ht32f5xxxx_ckcu.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ht32f5xxxx_ckcu.o(i.CKCU_GetPeripFrequency) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency) for CKCU_GetClocksFrequency
+    ht32f5xxxx_ckcu.o(i.CKCU_SysClockConfig) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetSysClockSource) for CKCU_GetSysClockSource
+    ht32f5xxxx_ckcu.o(i.CKCU_WaitHSEReady) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetClockReadyStatus) for CKCU_GetClockReadyStatus
+    ht32f5xxxx_cmp.o(i.CMP_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_crc.o(i.CRC_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_ebi.o(i.EBI_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_flash.o(i.FLASH_EraseOptionByte) refers to ht32f5xxxx_flash.o(i.FLASH_ErasePage) for FLASH_ErasePage
+    ht32f5xxxx_flash.o(i.FLASH_ErasePage) refers to ht32f5xxxx_flash.o(i.FLASH_WaitForOperationEnd) for FLASH_WaitForOperationEnd
+    ht32f5xxxx_flash.o(i.FLASH_MassErase) refers to ht32f5xxxx_flash.o(i.FLASH_WaitForOperationEnd) for FLASH_WaitForOperationEnd
+    ht32f5xxxx_flash.o(i.FLASH_ProgramOptionByte) refers to ht32f5xxxx_flash.o(i.FLASH_ProgramWordData) for FLASH_ProgramWordData
+    ht32f5xxxx_flash.o(i.FLASH_ProgramWordData) refers to ht32f5xxxx_flash.o(i.FLASH_WaitForOperationEnd) for FLASH_WaitForOperationEnd
+    ht32f5xxxx_gpio.o(i.AFIO_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_gpio.o(i.GPIO_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_gpio.o(i.GPIO_DisableDebugPort) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ht32f5xxxx_gpio.o(i.GPIO_DisableDebugPort) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ht32f5xxxx_gpio.o(i.GPIO_DisableDebugPort) refers to ht32f5xxxx_gpio.o(i.GPIO_PullResistorConfig) for GPIO_PullResistorConfig
+    ht32f5xxxx_gpio.o(i.GPIO_DisableDebugPort) refers to ht32f5xxxx_gpio.o(i.GPIO_InputConfig) for GPIO_InputConfig
+    ht32f5xxxx_i2c.o(i.I2C_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_i2c.o(i.I2C_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetPeripFrequency) for CKCU_GetPeripFrequency
+    ht32f5xxxx_i2c.o(i.I2C_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ht32f5xxxx_i2s.o(i.I2S_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_i2s.o(i.I2S_Init) refers to ht32f5xxxx_i2s.o(i.I2S_GetFlagStatus) for I2S_GetFlagStatus
+    ht32f5xxxx_pwrcu.o(i.PWRCU_PowerDown) refers to ht32f5xxxx_pwrcu.o(.data) for .data
+    ht32f5xxxx_sci.o(i.SCI_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_spi.o(i.SPI_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_tm.o(i.TM_CaptureInit) refers to ht32f5xxxx_tm.o(i._TM_CHx_Config) for _TM_CHx_Config
+    ht32f5xxxx_tm.o(i.TM_CaptureInit) refers to ht32f5xxxx_tm.o(i.TM_CHPSCConfig) for TM_CHPSCConfig
+    ht32f5xxxx_tm.o(i.TM_ChExternalClockConfig) refers to ht32f5xxxx_tm.o(i._TM_CHx_Config) for _TM_CHx_Config
+    ht32f5xxxx_tm.o(i.TM_ChExternalClockConfig) refers to ht32f5xxxx_tm.o(i.TM_StiConfig) for TM_StiConfig
+    ht32f5xxxx_tm.o(i.TM_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_tm.o(i.TM_ItiExternalClockConfig) refers to ht32f5xxxx_tm.o(i.TM_StiConfig) for TM_StiConfig
+    ht32f5xxxx_tm.o(i.TM_PwmInputInit) refers to ht32f5xxxx_tm.o(i._TM_CHx_Config) for _TM_CHx_Config
+    ht32f5xxxx_tm.o(i.TM_PwmInputInit) refers to ht32f5xxxx_tm.o(i.TM_CHPSCConfig) for TM_CHPSCConfig
+    ht32f5xxxx_usart.o(i.USART_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_usart.o(i.USART_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetPeripFrequency) for CKCU_GetPeripFrequency
+    ht32f5xxxx_usart.o(i.USART_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ht32f5xxxx_usbd.o(i.USBD_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32f5xxxx_usbd.o(i.USBD_EPTClearDTG) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTClearHalt) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTClearINT) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTEnableINT) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer0Addr) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer1Addr) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer1Addr) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBufferLen) for USBD_EPTGetBufferLen
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetBufferLen) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetHalt) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetINT) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTGetTransferCount) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTInit) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTInit) refers to ht32f5xxxx_usbd.o(i.USBD_EPTReset) for USBD_EPTReset
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetTransferCount) for USBD_EPTGetTransferCount
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer0Addr) for USBD_EPTGetBuffer0Addr
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory) refers to ht32f5xxxx_usbd.o(i._USBD_CopyMemory) for _USBD_CopyMemory
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer1Addr) for USBD_EPTGetBuffer1Addr
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadOUTData) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTReadOUTData) refers to ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory) for USBD_EPTReadMemory
+    ht32f5xxxx_usbd.o(i.USBD_EPTReset) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTSendSTALL) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTSetHalt) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTWaitSTALLSent) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBufferLen) for USBD_EPTGetBufferLen
+    ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) refers to ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr) for _USBD_GetEPTnAddr
+    ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetTransferCount) for USBD_EPTGetTransferCount
+    ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) refers to ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer0Addr) for USBD_EPTGetBuffer0Addr
+    ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData) refers to ht32f5xxxx_usbd.o(i._USBD_CopyMemory) for _USBD_CopyMemory
+    ht32f5xxxx_usbd.o(i.USBD_Init) refers to ht32f5xxxx_usbd.o(i.USBD_PreInit) for USBD_PreInit
+    ht32f5xxxx_usbd.o(i.USBD_PowerUp) refers to ht32f5xxxx_usbd.o(i.USBD_EnableINT) for USBD_EnableINT
+    ht32f5xxxx_usbd.o(i.USBD_PowerUp) refers to ht32f5xxxx_usbd.o(i.USBD_DPWakeUpCmd) for USBD_DPWakeUpCmd
+    ht32f5xxxx_usbd.o(i.USBD_PowerUp) refers to ht32f5xxxx_usbd.o(i.USBD_DPpullupCmd) for USBD_DPpullupCmd
+    ht32f5xxxx_usbd.o(i.USBD_PowerUp) refers to ht32f5xxxx_usbd.o(.data) for .data
+    ht32f5xxxx_wdt.o(i.WDT_DeInit) refers to ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset) for RSTCU_PeripReset
+    ht32_retarget.o(i.RETARGET_Configuration) refers to ht32_board.o(i.HT32F_DVB_COMInit) for HT32F_DVB_COMInit
+    ht32_retarget.o(i._ttywrch) refers to ht32_serial.o(i.SERIAL_PutChar) for SERIAL_PutChar
+    ht32_retarget.o(i.fgetc) refers to ht32_serial.o(i.SERIAL_GetChar) for SERIAL_GetChar
+    ht32_retarget.o(i.fputc) refers to ht32_serial.o(i.SERIAL_PutChar) for SERIAL_PutChar
+    ht32_serial.o(i.SERIAL_GetChar) refers to ht32f5xxxx_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    ht32_serial.o(i.SERIAL_GetChar) refers to ht32f5xxxx_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency) for CKCU_GetClocksFrequency
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to uidiv.o(.text) for __aeabi_uidivmod
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_UpdateCmd) for TM_UpdateCmd
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_DeInit) for TM_DeInit
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_gpio.o(i.GPIO_DriveConfig) for GPIO_DriveConfig
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_TimeBaseStructInit) for TM_TimeBaseStructInit
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_TimeBaseInit) for TM_TimeBaseInit
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_ClearFlag) for TM_ClearFlag
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_OutputStructInit) for TM_OutputStructInit
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_OutputInit) for TM_OutputInit
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_CHCCRPreloadConfig) for TM_CHCCRPreloadConfig
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_CRRPreloadCmd) for TM_CRRPreloadCmd
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_mctm.o(i.MCTM_CHMOECmd) for MCTM_CHMOECmd
+    ht32_board.o(i.HT32F_DVB_BuzzerFun) refers to ht32f5xxxx_tm.o(i.TM_Cmd) for TM_Cmd
+    ht32_board.o(i.HT32F_DVB_BuzzerOutputCmd) refers to ht32f5xxxx_tm.o(i.TM_ChannelConfig) for TM_ChannelConfig
+    ht32_board.o(i.HT32F_DVB_COMInit) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ht32_board.o(i.HT32F_DVB_COMInit) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ht32_board.o(i.HT32F_DVB_COMInit) refers to ht32f5xxxx_usart.o(i.USART_Init) for USART_Init
+    ht32_board.o(i.HT32F_DVB_COMInit) refers to ht32f5xxxx_usart.o(i.USART_TxRxCmd) for USART_TxRxCmd
+    ht32_board.o(i.HT32F_DVB_COMInit) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32_board.o(i._HT32F_DVB_ClockConfig) for _HT32F_DVB_ClockConfig
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32_board.o(i.HT32F_DVB_LEDOff) for HT32F_DVB_LEDOff
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32f5xxxx_gpio.o(i.GPIO_PullResistorConfig) for GPIO_PullResistorConfig
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32f5xxxx_gpio.o(i.GPIO_DriveConfig) for GPIO_DriveConfig
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig) for GPIO_DirectionConfig
+    ht32_board.o(i.HT32F_DVB_LEDInit) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_LEDOff) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_LEDOn) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_LEDToggle) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_PBGetState) refers to ht32f5xxxx_gpio.o(i.GPIO_ReadInBit) for GPIO_ReadInBit
+    ht32_board.o(i.HT32F_DVB_PBGetState) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32_board.o(i._HT32F_DVB_ClockConfig) for _HT32F_DVB_ClockConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_gpio.o(i.GPIO_PullResistorConfig) for GPIO_PullResistorConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig) for GPIO_DirectionConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_gpio.o(i.GPIO_InputConfig) for GPIO_InputConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_gpio.o(i.AFIO_EXTISourceConfig) for AFIO_EXTISourceConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_exti.o(i.EXTI_Init) for EXTI_Init
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32f5xxxx_exti.o(i.EXTI_IntConfig) for EXTI_IntConfig
+    ht32_board.o(i.HT32F_DVB_PBInit) refers to ht32_board.o(.constdata) for .constdata
+    ht32_board.o(i._HT32F_DVB_ClockConfig) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ebi_lcd.o(i.LCD_BackColorSet) refers to ebi_lcd.o(.data) for .data
+    ebi_lcd.o(i.LCD_CharDisplay) refers to ebi_lcd.o(i.LCD_CharDraw) for LCD_CharDraw
+    ebi_lcd.o(i.LCD_CharDisplay) refers to ebi_lcd.o(.constdata) for .constdata
+    ebi_lcd.o(i.LCD_CharDraw) refers to ebi_lcd.o(i.LCD_StarterSet) for LCD_StarterSet
+    ebi_lcd.o(i.LCD_CharDraw) refers to ebi_lcd.o(.data) for .data
+    ebi_lcd.o(i.LCD_CircleDraw) refers to ebi_lcd.o(i.LCD_StarterSet) for LCD_StarterSet
+    ebi_lcd.o(i.LCD_CircleDraw) refers to ebi_lcd.o(i.LCD_WriteRAMWord) for LCD_WriteRAMWord
+    ebi_lcd.o(i.LCD_CircleDraw) refers to ebi_lcd.o(.data) for .data
+    ebi_lcd.o(i.LCD_Clear) refers to ebi_lcd.o(i.LCD_StarterSet) for LCD_StarterSet
+    ebi_lcd.o(i.LCD_Config) refers to ebi_lcd.o(i._delay) for _delay
+    ebi_lcd.o(i.LCD_Config) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    ebi_lcd.o(i.LCD_Config) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    ebi_lcd.o(i.LCD_Config) refers to ebi_lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    ebi_lcd.o(i.LCD_Config) refers to ebi_lcd.o(i.LCD_Clear) for LCD_Clear
+    ebi_lcd.o(i.LCD_Config) refers to ht32_board.o(.constdata) for GPIO_PORT
+    ebi_lcd.o(i.LCD_DisplayOff) refers to ebi_lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    ebi_lcd.o(i.LCD_DisplayOn) refers to ebi_lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig) for GPIO_DirectionConfig
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_ebi.o(i.EBI_Init) for EBI_Init
+    ebi_lcd.o(i.LCD_Init) refers to ht32f5xxxx_ebi.o(i.EBI_Cmd) for EBI_Cmd
+    ebi_lcd.o(i.LCD_Init) refers to ht32_board.o(.constdata) for GPIO_PORT
+    ebi_lcd.o(i.LCD_LineDraw) refers to ebi_lcd.o(i.LCD_StarterSet) for LCD_StarterSet
+    ebi_lcd.o(i.LCD_LineDraw) refers to ebi_lcd.o(i.LCD_WriteRAMWord) for LCD_WriteRAMWord
+    ebi_lcd.o(i.LCD_LineDraw) refers to ebi_lcd.o(.data) for .data
+    ebi_lcd.o(i.LCD_PicDraw) refers to ebi_lcd.o(i.LCD_StarterSet) for LCD_StarterSet
+    ebi_lcd.o(i.LCD_RectDraw) refers to ebi_lcd.o(i.LCD_LineDraw) for LCD_LineDraw
+    ebi_lcd.o(i.LCD_StarterSet) refers to ebi_lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    ebi_lcd.o(i.LCD_StringLineDisplay) refers to ebi_lcd.o(i.LCD_CharDisplay) for LCD_CharDisplay
+    ebi_lcd.o(i.LCD_TextColorSet) refers to ebi_lcd.o(.data) for .data
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to i2c_eeprom.o(i._I2C_EEPROM_AckPolling) for _I2C_EEPROM_AckPolling
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_CheckStatus) for I2C_CheckStatus
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_SendData) for I2C_SendData
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_TargetAddressConfig) for I2C_TargetAddressConfig
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_AckCmd) for I2C_AckCmd
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_ReceiveData) for I2C_ReceiveData
+    i2c_eeprom.o(i.I2C_EEPROM_BufferRead) refers to ht32f5xxxx_i2c.o(i.I2C_GenerateSTOP) for I2C_GenerateSTOP
+    i2c_eeprom.o(i.I2C_EEPROM_BufferWrite) refers to i2c_eeprom.o(i.I2C_EEPROM_PageWrite) for I2C_EEPROM_PageWrite
+    i2c_eeprom.o(i.I2C_EEPROM_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    i2c_eeprom.o(i.I2C_EEPROM_Init) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    i2c_eeprom.o(i.I2C_EEPROM_Init) refers to ht32f5xxxx_i2c.o(i.I2C_Init) for I2C_Init
+    i2c_eeprom.o(i.I2C_EEPROM_Init) refers to ht32f5xxxx_i2c.o(i.I2C_Cmd) for I2C_Cmd
+    i2c_eeprom.o(i.I2C_EEPROM_PageWrite) refers to i2c_eeprom.o(i._I2C_EEPROM_AckPolling) for _I2C_EEPROM_AckPolling
+    i2c_eeprom.o(i.I2C_EEPROM_PageWrite) refers to ht32f5xxxx_i2c.o(i.I2C_CheckStatus) for I2C_CheckStatus
+    i2c_eeprom.o(i.I2C_EEPROM_PageWrite) refers to ht32f5xxxx_i2c.o(i.I2C_SendData) for I2C_SendData
+    i2c_eeprom.o(i.I2C_EEPROM_PageWrite) refers to ht32f5xxxx_i2c.o(i.I2C_GenerateSTOP) for I2C_GenerateSTOP
+    i2c_eeprom.o(i._I2C_EEPROM_AckPolling) refers to ht32f5xxxx_i2c.o(i.I2C_GetFlagStatus) for I2C_GetFlagStatus
+    i2c_eeprom.o(i._I2C_EEPROM_AckPolling) refers to ht32f5xxxx_i2c.o(i.I2C_TargetAddressConfig) for I2C_TargetAddressConfig
+    i2c_eeprom.o(i._I2C_EEPROM_AckPolling) refers to ht32f5xxxx_i2c.o(i.I2C_ClearFlag) for I2C_ClearFlag
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_BlockErase) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_BufferDualRead) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_BufferDualRead) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_BufferDualRead) refers to ht32f5xxxx_spi.o(i.SPI_DUALCmd) for SPI_DUALCmd
+    spi_flash.o(i.SPI_FLASH_BufferDualRead) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_BufferDualRead) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_spi.o(i.SPI_DUALCmd) for SPI_DUALCmd
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_Config) for PDMA_Config
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_EnaCmd) for PDMA_EnaCmd
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_spi.o(i.SPI_PDMACmd) for SPI_PDMACmd
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_BufferRead) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_BufferRead) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_BufferRead) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_BufferRead) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_Config) for PDMA_Config
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_EnaCmd) for PDMA_EnaCmd
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_spi.o(i.SPI_PDMACmd) for SPI_PDMACmd
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_BufferReadByDMA) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_ChipErase) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig) for GPIO_DirectionConfig
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_gpio.o(i.AFIO_GPxConfig) for AFIO_GPxConfig
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_spi.o(i.SPI_Init) for SPI_Init
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_spi.o(i.SPI_SELOutputCmd) for SPI_SELOutputCmd
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32f5xxxx_spi.o(i.SPI_Cmd) for SPI_Cmd
+    spi_flash.o(i.SPI_FLASH_Init) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_PageWrite) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig) for CKCU_PeripClockConfig
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_Config) for PDMA_Config
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_pdma.o(i.PDMA_EnaCmd) for PDMA_EnaCmd
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_spi.o(i.SPI_PDMACmd) for SPI_PDMACmd
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_PageWriteByDMA) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_ReadJEDECID) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_ReadJEDECID) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_ReadJEDECID) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_ReadJEDECID) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_SectorErase) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_SendByte) refers to ht32f5xxxx_spi.o(i.SPI_GetFlagStatus) for SPI_GetFlagStatus
+    spi_flash.o(i.SPI_FLASH_SendByte) refers to ht32f5xxxx_spi.o(i.SPI_SendData) for SPI_SendData
+    spi_flash.o(i.SPI_FLASH_SendByte) refers to ht32f5xxxx_spi.o(i.SPI_ReceiveData) for SPI_ReceiveData
+    spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_WriteDisable) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_WriteDisable) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_WriteDisable) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_WriteDisable) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_WriteEnable) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_WriteEnable) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_WriteEnable) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_WriteEnable) refers to ht32_board.o(.constdata) for GPIO_PORT
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to spi_flash.o(i.SPI_FLASH_WriteEnable) for SPI_FLASH_WriteEnable
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits) for GPIO_ClearOutBits
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to spi_flash.o(i.SPI_FLASH_SendByte) for SPI_FLASH_SendByte
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to ht32f5xxxx_gpio.o(i.GPIO_SetOutBits) for GPIO_SetOutBits
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to spi_flash.o(i.SPI_FLASH_WaitForWriteEnd) for SPI_FLASH_WaitForWriteEnd
+    spi_flash.o(i.SPI_FLASH_WriteStatus) refers to ht32_board.o(.constdata) for GPIO_PORT
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_ht32f5xxxx_01.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_ht32f5xxxx_01.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(i.Buzzer_Fun1), (36 bytes).
+    Removing main.o(i.Buzzer_PlayTable), (52 bytes).
+    Removing main.o(.data), (96 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing main.o(.data), (4 bytes).
+    Removing ht32f5xxxx_01_it.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_01_it.o(.revsh_text), (4 bytes).
+    Removing buzzer_pwm.o(.rev16_text), (4 bytes).
+    Removing buzzer_pwm.o(.revsh_text), (4 bytes).
+    Removing system_ht32f5xxxx_01.o(.rev16_text), (4 bytes).
+    Removing system_ht32f5xxxx_01.o(.revsh_text), (4 bytes).
+    Removing system_ht32f5xxxx_01.o(i.SystemCoreClockUpdate), (112 bytes).
+    Removing startup_ht32f5xxxx_01.o(HEAP), (0 bytes).
+    Removing ht32_usbd_core.o(.rev16_text), (4 bytes).
+    Removing ht32_usbd_core.o(.revsh_text), (4 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_GetRemoteWakeUpFeature), (10 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_GetStatus), (16 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_IRQHandler), (380 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_Init), (28 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_IsSuspend), (16 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_MainRoutine), (58 bytes).
+    Removing ht32_usbd_core.o(i.USBDCore_TriggerRemoteWakeup), (12 bytes).
+    Removing ht32_usbd_core.o(i._USBDCore_ControlIN), (68 bytes).
+    Removing ht32_usbd_core.o(i._USBDCore_Setup), (108 bytes).
+    Removing ht32_usbd_core.o(i._USBDCore_Standard_GetStatus), (56 bytes).
+    Removing ht32_usbd_core.o(i._USBDCore_Standard_Request), (272 bytes).
+    Removing ht32_usbd_core.o(i._USBDCore_Standard_SetClearFeature), (80 bytes).
+    Removing ht32_usbd_core.o(.data), (4 bytes).
+    Removing ht32_cm0plus_misc.o(.rev16_text), (4 bytes).
+    Removing ht32_cm0plus_misc.o(.revsh_text), (4 bytes).
+    Removing ht32_cm0plus_misc.o(i.DIV32_Init), (20 bytes).
+    Removing ht32_cm0plus_misc.o(i.NVIC_LowPowerConfig), (24 bytes).
+    Removing ht32_cm0plus_misc.o(i.NVIC_SetPendingSystemHandler), (16 bytes).
+    Removing ht32_cm0plus_misc.o(i.NVIC_SetVectorTable), (20 bytes).
+    Removing ht32_cm0plus_misc.o(i.RBIT), (22 bytes).
+    Removing ht32_cm0plus_misc.o(i.Rand_Init), (28 bytes).
+    Removing ht32_cm0plus_misc.o(.constdata), (344 bytes).
+    Removing ht32_cm0plus_misc.o(.data), (360 bytes).
+    Removing ht32f5xxxx_adc.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_adc.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_AWDConfig), (12 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_AWDSingleChannelConfig), (16 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_AWDThresholdsConfig), (8 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_ClearIntPendingBit), (6 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_Cmd), (18 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_DeInit), (18 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_GetConversionData), (10 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_GetFlagStatus), (12 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_GetIntStatus), (12 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_IntConfig), (18 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_PDMAConfig), (18 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_RegularChannelConfig), (28 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_RegularGroupConfig), (26 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_RegularTrigConfig), (14 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_Reset), (10 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_SamplingTimeConfig), (4 bytes).
+    Removing ht32f5xxxx_adc.o(i.ADC_SoftwareStartConvCmd), (20 bytes).
+    Removing ht32f5xxxx_bftm.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_bftm.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_ClearFlag), (14 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_DeInit), (48 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_EnaCmd), (18 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_GetCompare), (4 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_GetCounter), (4 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_GetFlagStatus), (10 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_IntConfig), (20 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_OneShotModeCmd), (18 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_SetCompare), (4 bytes).
+    Removing ht32f5xxxx_bftm.o(i.BFTM_SetCounter), (4 bytes).
+    Removing ht32f5xxxx_ckcu.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_ckcu.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_BKISOCmd), (28 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_CKMCmd), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_CKOUTConfig), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_ClearIntFlag), (16 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_DeInit), (92 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetClockReadyStatus), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetClocksFrequency), (108 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetIntStatus), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetPLLFrequency), (60 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetPeripFrequency), (52 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_GetSysClockSource), (16 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_HSECmd), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_HSIAutoTrimClkConfig), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_HSIAutoTrimCmd), (44 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_HSIAutoTrimIsReady), (52 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_HSICmd), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_IS_HSE_USED), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_IS_HSI_USED), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_IS_PLL_USED), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_IntConfig), (28 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_MCUDBGConfig), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_PLLCmd), (20 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_PLLInit), (48 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_PSRCWKUPCmd), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SetADCnPrescaler), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SetCKREFPrescaler), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SetHCLKPrescaler), (12 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SetPeripPrescaler), (40 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SleepClockConfig), (24 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_SysClockConfig), (44 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.CKCU_WaitHSEReady), (36 bytes).
+    Removing ht32f5xxxx_cmp.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_cmp.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_ClearFlag), (12 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_Cmd), (20 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_DeInit), (18 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_EdgeDetectConfig), (28 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_GetFlagStatus), (10 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_GetOutputStatus), (14 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_Init), (46 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_IntConfig), (16 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_SetScalerValue), (4 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_StructInit), (24 bytes).
+    Removing ht32f5xxxx_cmp.o(i.CMP_UnprotectConfig), (12 bytes).
+    Removing ht32f5xxxx_crc.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_crc.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_16), (32 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_32), (28 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_CCITT), (32 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_DeInit), (16 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_Init), (36 bytes).
+    Removing ht32f5xxxx_crc.o(i.CRC_Process), (16 bytes).
+    Removing ht32f5xxxx_ebi.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_ebi.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_ebi.o(i.EBI_Cmd), (28 bytes).
+    Removing ht32f5xxxx_ebi.o(i.EBI_DeInit), (16 bytes).
+    Removing ht32f5xxxx_ebi.o(i.EBI_GetBusyStatus), (16 bytes).
+    Removing ht32f5xxxx_ebi.o(i.EBI_Init), (140 bytes).
+    Removing ht32f5xxxx_ebi.o(i.EBI_StructInit), (44 bytes).
+    Removing ht32f5xxxx_exti.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_exti.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_ClearEdgeFlag), (16 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_ClearWakeupFlag), (20 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_DeInit), (56 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_GetEdgeFlag), (24 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_GetEdgeStatus), (40 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_GetSWCmdStatus), (24 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_GetWakeupFlagStatus), (24 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_Init), (32 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_IntConfig), (28 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_SWIntCmd), (28 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_WakeupEventConfig), (44 bytes).
+    Removing ht32f5xxxx_exti.o(i.EXTI_WakeupEventIntConfig), (28 bytes).
+    Removing ht32f5xxxx_flash.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_flash.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_BranchCacheCmd), (28 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_ClearIntFlag), (12 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_EraseOptionByte), (16 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_ErasePage), (20 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_GetIntStatus), (20 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_GetOptionByteStatus), (48 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_IntConfig), (24 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_MassErase), (20 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_PrefetchBufferCmd), (24 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_ProgramOptionByte), (76 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_ProgramWordData), (24 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_SetRemappingMode), (12 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_SetWaitState), (20 bytes).
+    Removing ht32f5xxxx_flash.o(i.FLASH_WaitForOperationEnd), (80 bytes).
+    Removing ht32f5xxxx_gpio.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_gpio.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_gpio.o(i.AFIO_DeInit), (18 bytes).
+    Removing ht32f5xxxx_gpio.o(i.AFIO_EXTISourceConfig), (44 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_ClearOutBits), (4 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_DeInit), (76 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig), (16 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_DisableDebugPort), (56 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_DriveConfig), (48 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_GetID), (8 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_InputConfig), (16 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_IsPinLocked), (10 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_IsPortLocked), (10 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_OpenDrainConfig), (16 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_PinLock), (12 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_PullResistorConfig), (42 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_ReadInBit), (10 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_ReadInData), (6 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_ReadOutBit), (10 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_ReadOutData), (6 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_SetOutBits), (4 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_WriteOutBits), (12 bytes).
+    Removing ht32f5xxxx_gpio.o(i.GPIO_WriteOutData), (4 bytes).
+    Removing ht32f5xxxx_gpio.o(i._AFIO_ClockControl), (40 bytes).
+    Removing ht32f5xxxx_gpio.o(i._GPIO_ClockControl), (48 bytes).
+    Removing ht32f5xxxx_i2c.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_AckCmd), (20 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_AddressMaskConfig), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_CheckStatus), (14 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_ClearFlag), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_Cmd), (18 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_CombFilterCmd), (20 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_DeInit), (44 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_GeneralCallCmd), (18 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_GenerateSTOP), (10 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_GetAddressBuffer), (6 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_GetFlagStatus), (10 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_Init), (156 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_IntConfig), (16 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_PDMACmd), (16 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_PDMANACKCmd), (20 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_ReadRegister), (10 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_ReceiveData), (6 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SendData), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SequentialFilterConfig), (124 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SetOwnAddress), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SetSCLHighPeriod), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SetSCLLowPeriod), (4 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SetTimeOutPrescaler), (10 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_SetTimeOutValue), (12 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_StructInit), (24 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_TargetAddressConfig), (20 bytes).
+    Removing ht32f5xxxx_i2c.o(i.I2C_TimeOutCmd), (20 bytes).
+    Removing ht32f5xxxx_i2s.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_i2s.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_ClearFlag), (12 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_Cmd), (28 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_DeInit), (18 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_FIFOReset), (16 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_FIFOTrigLevelConfig), (32 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_GetFIFOStatus), (20 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_GetFlagStatus), (20 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_Init), (116 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_IntConfig), (24 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_PDMACmd), (24 bytes).
+    Removing ht32f5xxxx_i2s.o(i.I2S_TxMuteCmd), (24 bytes).
+    Removing ht32f5xxxx_mctm.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_mctm.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_CHBRKCTRConfig), (48 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_CHBRKCTRConfig2), (14 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_CHBRKCTRStructInit), (20 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_COMPRECmd), (20 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_COMUSConfig), (20 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_ChNPolarityConfig), (22 bytes).
+    Removing ht32f5xxxx_mctm.o(i.MCTM_ChannelNConfig), (26 bytes).
+    Removing ht32f5xxxx_pdma.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_pdma.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_ClearFlag), (24 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_Config), (44 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_EnaCmd), (32 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_GetFlagStatus), (28 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_IntConfig), (56 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_SwTrigCmd), (32 bytes).
+    Removing ht32f5xxxx_pdma.o(i.PDMA_TranSizeConfig), (20 bytes).
+    Removing ht32f5xxxx_pwrcu.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_pwrcu.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_BODCmd), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_BODRISConfig), (24 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_CheckReadyAccessed), (32 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_DMOSCmd), (40 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_DeInit), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_DeepSleep1), (92 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_DeepSleep2), (104 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_DeepSleep2Ex), (192 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_GetBODFlagStatus), (16 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_GetDMOSStatus), (36 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_GetFlagStatus), (12 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_GetLVDFlagStatus), (16 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_HSIReadyCounterBitLengthConfig), (12 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_LDOConfig), (56 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_LVDCmd), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_LVDEventWakeupConfig), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_LVDIntWakeupConfig), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_PowerDown), (148 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_ReadBackupRegister), (16 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_SetLVDS), (20 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_Sleep), (32 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_V15RDYSourceConfig), (28 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_WakeupPinCmd), (24 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_WakeupPinIntConfig), (24 bytes).
+    Removing ht32f5xxxx_pwrcu.o(i.PWRCU_WriteBackupRegister), (16 bytes).
+    Removing ht32f5xxxx_pwrcu.o(.data), (1 bytes).
+    Removing ht32f5xxxx_rstcu.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_rstcu.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_rstcu.o(i.RSTCU_ClearAllResetFlag), (12 bytes).
+    Removing ht32f5xxxx_rstcu.o(i.RSTCU_ClearResetFlag), (16 bytes).
+    Removing ht32f5xxxx_rstcu.o(i.RSTCU_GetResetFlagStatus), (24 bytes).
+    Removing ht32f5xxxx_rstcu.o(i.RSTCU_PeripReset), (40 bytes).
+    Removing ht32f5xxxx_rtc.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_rtc.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_CMPCLRCmd), (24 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_ClockSourceConfig), (20 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_Cmd), (28 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_DeInit), (44 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_GetCompare), (12 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_GetCounter), (12 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_GetFlagStatus), (12 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_GetOutStatus), (20 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_GetPrescaler), (20 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_IntConfig), (24 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_LSECmd), (44 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_LSESMConfig), (20 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_LSILoadTrimData), (68 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_OutCmd), (28 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_OutConfig), (56 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_SetCompare), (12 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_SetPrescaler), (20 bytes).
+    Removing ht32f5xxxx_rtc.o(i.RTC_WakeupConfig), (24 bytes).
+    Removing ht32f5xxxx_sci.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_sci.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_ClearFlag), (28 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_ClockModeConfig), (18 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_Cmd), (18 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_DeInit), (36 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_ETUConfig), (6 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_GetFlagStatus), (14 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_Init), (30 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_IntConfig), (16 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_OutputDIO), (18 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_PDMACmd), (16 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_ReceiveData), (6 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_SendData), (4 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_SetGuardTimeValue), (4 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_SetWaitingTimeValue), (4 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_SoftwareClockCmd), (18 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_StructInit), (14 bytes).
+    Removing ht32f5xxxx_sci.o(i.SCI_WaitingTimeCounterCmd), (18 bytes).
+    Removing ht32f5xxxx_spi.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_spi.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_ClearFlag), (4 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_Cmd), (20 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_DUALCmd), (18 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_DeInit), (44 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_FIFOCmd), (20 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_FIFOTriggerLevelConfig), (32 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_GUARDTCmd), (18 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_GUARDTConfig), (20 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_GetFIFOStatus), (20 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_GetFlagStatus), (14 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_Init), (72 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_IntConfig), (16 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_PDMACmd), (16 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_ReceiveData), (6 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SELHTConfig), (14 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SELModeConfig), (20 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SELOutputCmd), (18 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SendData), (4 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SetDataLength), (16 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SetTimeOutValue), (4 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_SoftwareSELCmd), (18 bytes).
+    Removing ht32f5xxxx_spi.o(i.SPI_StructInit), (28 bytes).
+    Removing ht32f5xxxx_tm.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_tm.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CHCCDSConfig), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CHCCRPreloadConfig), (24 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CHPSCConfig), (22 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CKDIVConfig), (18 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CRRPreloadCmd), (18 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CaptureInit), (34 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CaptureStructInit), (18 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ChExternalClockConfig), (50 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ChPolarityConfig), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ClearIntPendingBit), (10 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ClearOREFConfig), (24 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_CounterModeConfig), (28 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_DeInit), (88 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_DecoderConfig), (64 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ForcedOREF), (18 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GenerateEvent), (4 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GetCaptureCompare), (10 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GetCounter), (6 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GetFlagStatus), (10 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GetIntStatus), (24 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_GetPrescaler), (6 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_HallInterfaceCmd), (22 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ImmActiveConfig), (24 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_InternalClockConfig), (12 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_ItiExternalClockConfig), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_MMSELConfig), (14 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_OutputModeConfig), (32 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_OutputStructInit), (24 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_PDMAConfig), (16 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_PrescalerConfig), (8 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_PwmInputInit), (94 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_SetAsymmetricCompare), (10 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_SetCounter), (6 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_SinglePulseModeCmd), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_SlaveModeConfig), (14 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_StiConfig), (26 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_TimSyncCmd), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_TimeBaseStructInit), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_UEVG_IntConfig), (18 bytes).
+    Removing ht32f5xxxx_tm.o(i.TM_UpdateCmd), (20 bytes).
+    Removing ht32f5xxxx_tm.o(i._TM_CHx_Config), (60 bytes).
+    Removing ht32f5xxxx_usart.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_usart.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_ClearFlag), (8 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_DeInit), (68 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_FIFOReset), (8 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_ForceBreakCmd), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_GetFIFOStatus), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_GetFlagStatus), (10 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_GetIntStatus), (10 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_HardwareFlowControlCmd), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_Init), (132 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_IntConfig), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_IrDACmd), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_IrDAConfig), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_IrDADirectionConfig), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_IrDAInvtCmd), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_PDMACmd), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_RS485AADCmd), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_RS485NMMCmd), (18 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_RS485TxEnablePolarityConfig), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_ReceiveData), (6 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SendData), (4 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SetAddressMatchValue), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SetGuardTime), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SetIrDAPrescaler), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SetTimeOutValue), (16 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_StickParityCmd), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_StickParityConfig), (24 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_StructInit), (22 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SynClockInit), (26 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_SynClockStructInit), (12 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_TXRXTLConfig), (20 bytes).
+    Removing ht32f5xxxx_usart.o(i.USART_TxRxCmd), (20 bytes).
+    Removing ht32f5xxxx_usbd.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_usbd.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_ClearINT), (12 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_DPWakeUpCmd), (28 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_DPpullupCmd), (24 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_DeInit), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_DisableDefaultPull), (12 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_DisableINT), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTClearDTG), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTClearHalt), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTClearINT), (12 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTEnableINT), (12 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer0Addr), (24 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetBuffer1Addr), (36 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetBufferLen), (14 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetHalt), (24 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetINT), (14 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTGetTransferCount), (18 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTInit), (36 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory), (56 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTReadOUTData), (48 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTReset), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTSendSTALL), (12 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTSetHalt), (20 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTWaitSTALLSent), (32 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EPTWriteINData), (68 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_EnableINT), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_GetEPTnINTNumber), (32 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_GetINT), (20 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_Init), (8 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_PowerOff), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_PowerOn), (28 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_PowerUp), (116 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_PreInit), (24 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_ReadSETUPData), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_RemoteWakeup), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_SRAMResetConditionCmd), (24 bytes).
+    Removing ht32f5xxxx_usbd.o(i.USBD_SetAddress), (20 bytes).
+    Removing ht32f5xxxx_usbd.o(i._USBD_CopyMemory), (138 bytes).
+    Removing ht32f5xxxx_usbd.o(i._USBD_GetEPTnAddr), (16 bytes).
+    Removing ht32f5xxxx_usbd.o(.data), (4 bytes).
+    Removing ht32f5xxxx_wdt.o(.rev16_text), (4 bytes).
+    Removing ht32f5xxxx_wdt.o(.revsh_text), (4 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_Cmd), (28 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_DeInit), (16 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_GetDeltaValue), (16 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_GetFlagStatus), (20 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_GetPrescaler), (20 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_GetReloadValue), (16 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_HaltConfig), (24 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_LockCmd), (36 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_ProtectCmd), (28 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_ResetCmd), (28 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_Restart), (16 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_SetDeltaValue), (20 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_SetPrescaler), (20 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_SetReloadValue), (20 bytes).
+    Removing ht32f5xxxx_wdt.o(i.WDT_SourceConfig), (16 bytes).
+    Removing ht32_retarget.o(.rev16_text), (4 bytes).
+    Removing ht32_retarget.o(.revsh_text), (4 bytes).
+    Removing ht32_retarget.o(i.RETARGET_Configuration), (30 bytes).
+    Removing ht32_retarget.o(i.__backspace), (4 bytes).
+    Removing ht32_retarget.o(i._sys_exit), (2 bytes).
+    Removing ht32_retarget.o(i._ttywrch), (8 bytes).
+    Removing ht32_retarget.o(i.fgetc), (8 bytes).
+    Removing ht32_retarget.o(i.fputc), (8 bytes).
+    Removing ht32_retarget.o(.data), (4 bytes).
+    Removing ht32_retarget.o(.data), (4 bytes).
+    Removing ht32_serial.o(.rev16_text), (4 bytes).
+    Removing ht32_serial.o(.revsh_text), (4 bytes).
+    Removing ht32_serial.o(i.SERIAL_Flush), (2 bytes).
+    Removing ht32_serial.o(i.SERIAL_GetChar), (28 bytes).
+    Removing ht32_serial.o(i.SERIAL_PutChar), (20 bytes).
+    Removing ht32_board.o(.rev16_text), (4 bytes).
+    Removing ht32_board.o(.revsh_text), (4 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_BuzzerFun), (292 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_BuzzerOutputCmd), (20 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_COMInit), (80 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_LEDInit), (88 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_LEDOff), (24 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_LEDOn), (24 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_LEDToggle), (32 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_PBGetState), (28 bytes).
+    Removing ht32_board.o(i.HT32F_DVB_PBInit), (188 bytes).
+    Removing ht32_board.o(i._HT32F_DVB_ClockConfig), (72 bytes).
+    Removing ht32_board.o(.constdata), (68 bytes).
+    Removing ebi_lcd.o(.rev16_text), (4 bytes).
+    Removing ebi_lcd.o(.revsh_text), (4 bytes).
+    Removing ebi_lcd.o(i.LCD_BackColorSet), (12 bytes).
+    Removing ebi_lcd.o(i.LCD_CharDisplay), (24 bytes).
+    Removing ebi_lcd.o(i.LCD_CharDraw), (84 bytes).
+    Removing ebi_lcd.o(i.LCD_CircleDraw), (200 bytes).
+    Removing ebi_lcd.o(i.LCD_Clear), (32 bytes).
+    Removing ebi_lcd.o(i.LCD_Config), (640 bytes).
+    Removing ebi_lcd.o(i.LCD_DisplayOff), (12 bytes).
+    Removing ebi_lcd.o(i.LCD_DisplayOn), (12 bytes).
+    Removing ebi_lcd.o(i.LCD_Init), (340 bytes).
+    Removing ebi_lcd.o(i.LCD_LineDraw), (80 bytes).
+    Removing ebi_lcd.o(i.LCD_PicDraw), (86 bytes).
+    Removing ebi_lcd.o(i.LCD_ReadReg), (10 bytes).
+    Removing ebi_lcd.o(i.LCD_RectDraw), (58 bytes).
+    Removing ebi_lcd.o(i.LCD_SetDisplayArea), (84 bytes).
+    Removing ebi_lcd.o(i.LCD_StarterSet), (44 bytes).
+    Removing ebi_lcd.o(i.LCD_StringLineDisplay), (40 bytes).
+    Removing ebi_lcd.o(i.LCD_TextColorSet), (12 bytes).
+    Removing ebi_lcd.o(i.LCD_WriteRAM), (8 bytes).
+    Removing ebi_lcd.o(i.LCD_WriteRAMPrior), (10 bytes).
+    Removing ebi_lcd.o(i.LCD_WriteRAMWord), (12 bytes).
+    Removing ebi_lcd.o(i.LCD_WriteReg), (10 bytes).
+    Removing ebi_lcd.o(i._delay), (28 bytes).
+    Removing ebi_lcd.o(.constdata), (4560 bytes).
+    Removing ebi_lcd.o(.data), (4 bytes).
+    Removing i2c_eeprom.o(.rev16_text), (4 bytes).
+    Removing i2c_eeprom.o(.revsh_text), (4 bytes).
+    Removing i2c_eeprom.o(i.I2C_EEPROM_BufferRead), (156 bytes).
+    Removing i2c_eeprom.o(i.I2C_EEPROM_BufferWrite), (50 bytes).
+    Removing i2c_eeprom.o(i.I2C_EEPROM_Init), (88 bytes).
+    Removing i2c_eeprom.o(i.I2C_EEPROM_PageWrite), (96 bytes).
+    Removing i2c_eeprom.o(i._I2C_EEPROM_AckPolling), (60 bytes).
+    Removing spi_flash.o(.rev16_text), (4 bytes).
+    Removing spi_flash.o(.revsh_text), (4 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BlockErase), (64 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BufferDualRead), (104 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BufferDualReadByDMA), (276 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BufferRead), (76 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BufferReadByDMA), (256 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_BufferWriteBy), (194 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_ChipErase), (40 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_Init), (148 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_PageWrite), (84 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_PageWriteByDMA), (256 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_ReadJEDECID), (64 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_SectorErase), (64 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_SendByte), (52 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_WaitForWriteEnd), (48 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_WriteDisable), (32 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_WriteEnable), (32 bytes).
+    Removing spi_flash.o(i.SPI_FLASH_WriteStatus), (48 bytes).
+    Removing ht32f5xxxx_ckcu.o(i.__ARM_common_switch8), (26 bytes).
+
+560 unused section(s) (total 22413 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      356  startup_ht32f5xxxx_01.o(RESET)
+    ../clib/../cmprslib/lz77c.c              0x00000000   Number         0  __dclz77c.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  useno.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32_cm0plus_misc.c 0x00000000   Number         0  ht32_cm0plus_misc.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32_retarget.c 0x00000000   Number         0  ht32_retarget.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32_serial.c 0x00000000   Number         0  ht32_serial.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_adc.c 0x00000000   Number         0  ht32f5xxxx_adc.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_bftm.c 0x00000000   Number         0  ht32f5xxxx_bftm.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_ckcu.c 0x00000000   Number         0  ht32f5xxxx_ckcu.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_cmp.c 0x00000000   Number         0  ht32f5xxxx_cmp.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_crc.c 0x00000000   Number         0  ht32f5xxxx_crc.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_ebi.c 0x00000000   Number         0  ht32f5xxxx_ebi.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_exti.c 0x00000000   Number         0  ht32f5xxxx_exti.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_flash.c 0x00000000   Number         0  ht32f5xxxx_flash.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_gpio.c 0x00000000   Number         0  ht32f5xxxx_gpio.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_i2c.c 0x00000000   Number         0  ht32f5xxxx_i2c.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_i2s.c 0x00000000   Number         0  ht32f5xxxx_i2s.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_mctm.c 0x00000000   Number         0  ht32f5xxxx_mctm.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_pdma.c 0x00000000   Number         0  ht32f5xxxx_pdma.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_pwrcu.c 0x00000000   Number         0  ht32f5xxxx_pwrcu.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_rstcu.c 0x00000000   Number         0  ht32f5xxxx_rstcu.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_rtc.c 0x00000000   Number         0  ht32f5xxxx_rtc.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_sci.c 0x00000000   Number         0  ht32f5xxxx_sci.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_spi.c 0x00000000   Number         0  ht32f5xxxx_spi.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_tm.c 0x00000000   Number         0  ht32f5xxxx_tm.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_usart.c 0x00000000   Number         0  ht32f5xxxx_usart.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_usbd.c 0x00000000   Number         0  ht32f5xxxx_usbd.o ABSOLUTE
+    ..\..\..\..\library\HT32F5xxxx_Driver\src\ht32f5xxxx_wdt.c 0x00000000   Number         0  ht32f5xxxx_wdt.o ABSOLUTE
+    ..\..\..\..\library\HT32_USBD_Library\src\ht32_usbd_core.c 0x00000000   Number         0  ht32_usbd_core.o ABSOLUTE
+    ..\..\..\..\utilities\common\ebi_lcd.c   0x00000000   Number         0  ebi_lcd.o ABSOLUTE
+    ..\..\..\..\utilities\common\i2c_eeprom.c 0x00000000   Number         0  i2c_eeprom.o ABSOLUTE
+    ..\..\..\..\utilities\common\spi_flash.c 0x00000000   Number         0  spi_flash.o ABSOLUTE
+    ..\..\..\..\utilities\ht32_board.c       0x00000000   Number         0  ht32_board.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32_cm0plus_misc.c 0x00000000   Number         0  ht32_cm0plus_misc.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32_retarget.c 0x00000000   Number         0  ht32_retarget.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32_serial.c 0x00000000   Number         0  ht32_serial.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_adc.c 0x00000000   Number         0  ht32f5xxxx_adc.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_bftm.c 0x00000000   Number         0  ht32f5xxxx_bftm.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_ckcu.c 0x00000000   Number         0  ht32f5xxxx_ckcu.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_cmp.c 0x00000000   Number         0  ht32f5xxxx_cmp.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_crc.c 0x00000000   Number         0  ht32f5xxxx_crc.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_ebi.c 0x00000000   Number         0  ht32f5xxxx_ebi.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_exti.c 0x00000000   Number         0  ht32f5xxxx_exti.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_flash.c 0x00000000   Number         0  ht32f5xxxx_flash.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_gpio.c 0x00000000   Number         0  ht32f5xxxx_gpio.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_i2c.c 0x00000000   Number         0  ht32f5xxxx_i2c.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_i2s.c 0x00000000   Number         0  ht32f5xxxx_i2s.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_mctm.c 0x00000000   Number         0  ht32f5xxxx_mctm.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_pdma.c 0x00000000   Number         0  ht32f5xxxx_pdma.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_pwrcu.c 0x00000000   Number         0  ht32f5xxxx_pwrcu.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_rstcu.c 0x00000000   Number         0  ht32f5xxxx_rstcu.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_rtc.c 0x00000000   Number         0  ht32f5xxxx_rtc.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_sci.c 0x00000000   Number         0  ht32f5xxxx_sci.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_spi.c 0x00000000   Number         0  ht32f5xxxx_spi.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_tm.c 0x00000000   Number         0  ht32f5xxxx_tm.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_usart.c 0x00000000   Number         0  ht32f5xxxx_usart.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_usbd.c 0x00000000   Number         0  ht32f5xxxx_usbd.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32F5xxxx_Driver\\src\\ht32f5xxxx_wdt.c 0x00000000   Number         0  ht32f5xxxx_wdt.o ABSOLUTE
+    ..\\..\\..\\..\\library\\HT32_USBD_Library\\src\\ht32_usbd_core.c 0x00000000   Number         0  ht32_usbd_core.o ABSOLUTE
+    ..\\..\\..\\..\\utilities\\common\\ebi_lcd.c 0x00000000   Number         0  ebi_lcd.o ABSOLUTE
+    ..\\..\\..\\..\\utilities\\common\\i2c_eeprom.c 0x00000000   Number         0  i2c_eeprom.o ABSOLUTE
+    ..\\..\\..\\..\\utilities\\common\\spi_flash.c 0x00000000   Number         0  spi_flash.o ABSOLUTE
+    ..\\..\\..\\..\\utilities\\ht32_board.c  0x00000000   Number         0  ht32_board.o ABSOLUTE
+    ..\\buzzer_pwm.c                         0x00000000   Number         0  buzzer_pwm.o ABSOLUTE
+    ..\\ht32f5xxxx_01_it.c                   0x00000000   Number         0  ht32f5xxxx_01_it.o ABSOLUTE
+    ..\\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    ..\\system_ht32f5xxxx_01.c               0x00000000   Number         0  system_ht32f5xxxx_01.o ABSOLUTE
+    ..\buzzer_pwm.c                          0x00000000   Number         0  buzzer_pwm.o ABSOLUTE
+    ..\ht32f5xxxx_01_it.c                    0x00000000   Number         0  ht32f5xxxx_01_it.o ABSOLUTE
+    ..\main.c                                0x00000000   Number         0  main.o ABSOLUTE
+    ..\system_ht32f5xxxx_01.c                0x00000000   Number         0  system_ht32f5xxxx_01.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    ht32_op.s                                0x00000000   Number         0  ht32_op.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_ht32f5xxxx_01.s                  0x00000000   Number         0  startup_ht32f5xxxx_01.o ABSOLUTE
+    BootProcess                              0x000000cd   Thumb Code    94  startup_ht32f5xxxx_01.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000164   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000164   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000168   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000016c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000016c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000016c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000174   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000174   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000174   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000174   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000178   Section        0  uidiv.o(.text)
+    .text                                    0x000001a4   Section        0  idiv.o(.text)
+    .text                                    0x000001cc   Section        0  dmul.o(.text)
+    .text                                    0x0000029c   Section        0  dflti.o(.text)
+    .text                                    0x000002c4   Section        0  dfixi.o(.text)
+    .text                                    0x0000030c   Section        0  dfixui.o(.text)
+    .text                                    0x00000348   Section        0  llushr.o(.text)
+    .text                                    0x0000036a   Section        0  iusefp.o(.text)
+    .text                                    0x0000036a   Section        0  depilogue.o(.text)
+    .text                                    0x00000428   Section       36  init.o(.text)
+    .text                                    0x0000044c   Section        0  llshl.o(.text)
+    .text                                    0x0000046c   Section        0  __dclz77c.o(.text)
+    i.AFIO_GPxConfig                         0x000004cc   Section        0  ht32f5xxxx_gpio.o(i.AFIO_GPxConfig)
+    i.Buzzer_Fun2                            0x00000524   Section        0  main.o(i.Buzzer_Fun2)
+    i.Buzzer_Init                            0x00000548   Section        0  buzzer_pwm.o(i.Buzzer_Init)
+    i.Buzzer_IsFinish                        0x000005d8   Section        0  buzzer_pwm.o(i.Buzzer_IsFinish)
+    i.Buzzer_Start                           0x000005ec   Section        0  buzzer_pwm.o(i.Buzzer_Start)
+    i.CKCU_PeripClockConfig                  0x00000678   Section        0  ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig)
+    i.Delay                                  0x000006a0   Section        0  main.o(i.Delay)
+    i.HardFault_Handler                      0x000006cc   Section        0  ht32f5xxxx_01_it.o(i.HardFault_Handler)
+    i.MCTM0_IRQHandler                       0x000006dc   Section        0  buzzer_pwm.o(i.MCTM0_IRQHandler)
+    i.MCTM_CHMOECmd                          0x00000744   Section        0  ht32f5xxxx_mctm.o(i.MCTM_CHMOECmd)
+    i.NMI_Handler                            0x00000756   Section        0  ht32f5xxxx_01_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x00000758   Section        0  ht32f5xxxx_01_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x0000075a   Section        0  ht32f5xxxx_01_it.o(i.SVC_Handler)
+    i.SYSTICK_ClockSourceConfig              0x0000075c   Section        0  ht32_cm0plus_misc.o(i.SYSTICK_ClockSourceConfig)
+    i.SYSTICK_CounterCmd                     0x00000774   Section        0  ht32_cm0plus_misc.o(i.SYSTICK_CounterCmd)
+    i.SYSTICK_IntConfig                      0x00000798   Section        0  ht32_cm0plus_misc.o(i.SYSTICK_IntConfig)
+    i.SYSTICK_SetReloadValue                 0x000007b0   Section        0  ht32_cm0plus_misc.o(i.SYSTICK_SetReloadValue)
+    i.SysTick_Handler                        0x000007bc   Section        0  main.o(i.SysTick_Handler)
+    i.SystemInit                             0x000007c4   Section        0  system_ht32f5xxxx_01.o(i.SystemInit)
+    i.TM_ChannelConfig                       0x000008c0   Section        0  ht32f5xxxx_tm.o(i.TM_ChannelConfig)
+    i.TM_ClearFlag                           0x000008d8   Section        0  ht32f5xxxx_tm.o(i.TM_ClearFlag)
+    i.TM_Cmd                                 0x000008e2   Section        0  ht32f5xxxx_tm.o(i.TM_Cmd)
+    i.TM_IntConfig                           0x000008f6   Section        0  ht32f5xxxx_tm.o(i.TM_IntConfig)
+    i.TM_OutputInit                          0x00000908   Section        0  ht32f5xxxx_tm.o(i.TM_OutputInit)
+    i.TM_SetCaptureCompare                   0x000009a8   Section        0  ht32f5xxxx_tm.o(i.TM_SetCaptureCompare)
+    i.TM_SetCounterReload                    0x000009b2   Section        0  ht32f5xxxx_tm.o(i.TM_SetCounterReload)
+    i.TM_TimeBaseInit                        0x000009b8   Section        0  ht32f5xxxx_tm.o(i.TM_TimeBaseInit)
+    i.TimingDelay                            0x000009f8   Section        0  main.o(i.TimingDelay)
+    i.__ARM_clz                              0x00000a0c   Section        0  depilogue.o(i.__ARM_clz)
+    i.__scatterload_copy                     0x00000a3a   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000a48   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000a4a   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x00000a58   Section        0  main.o(i.main)
+    i.music                                  0x00000a90   Section        0  main.o(i.music)
+    i.music_2                                0x00000b2c   Section        0  main.o(i.music_2)
+    .data                                    0x20000000   Section     2120  main.o(.data)
+    i                                        0x20000008   Data           4  main.o(.data)
+    .data                                    0x20000848   Section        4  ht32f5xxxx_01_it.o(.data)
+    gIsContinue                              0x20000848   Data           4  ht32f5xxxx_01_it.o(.data)
+    .data                                    0x2000084c   Section       12  buzzer_pwm.o(.data)
+    gBee_Time                                0x2000084c   Data           1  buzzer_pwm.o(.data)
+    gBee_Active                              0x2000084e   Data           2  buzzer_pwm.o(.data)
+    gBee_InActive                            0x20000850   Data           2  buzzer_pwm.o(.data)
+    gBee_Count                               0x20000854   Data           4  buzzer_pwm.o(.data)
+    .data                                    0x20000858   Section        4  system_ht32f5xxxx_01.o(.data)
+    STACK                                    0x20000860   Section      512  startup_ht32f5xxxx_01.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_ht32f5xxxx_01.o(RESET)
+    __use_no_errno                           0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_exception_handling              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_fp                              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap                            0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap_region                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting_swi                 0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_signal_handling                 0x00000000   Number         0  useno.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x000000c1   Thumb Code    12  startup_ht32f5xxxx_01.o(RESET)
+    ADC_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    AES_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    BFTM0_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    BFTM1_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    COMP_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    EVWUP_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    EXTI0_1_IRQHandler                       0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    EXTI2_3_IRQHandler                       0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    EXTI4_15_IRQHandler                      0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    FLASH_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    GPTM0_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    GPTM1_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    I2C0_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    I2C1_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    I2C2_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    I2S_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    LVD_BOD_IRQHandler                       0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    MIDI_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    PDMA_CH0_1_IRQHandler                    0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    PDMA_CH2_5_IRQHandler                    0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    PWM0_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    PWM1_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    QSPI_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    RTC_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SCI_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SCTM0_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SCTM1_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SCTM2_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SCTM3_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SPI0_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    SPI1_IRQHandler                          0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    UART0_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    UART1_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    UART2_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    UART3_IRQHandler                         0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    USART0_IRQHandler                        0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    USART1_IRQHandler                        0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    USB_IRQHandler                           0x00000135   Thumb Code     0  startup_ht32f5xxxx_01.o(RESET)
+    __main                                   0x00000165   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000165   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000169   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000016d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000016d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000016d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000016d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000175   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000175   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    __aeabi_uidiv                            0x00000179   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00000179   Thumb Code    44  uidiv.o(.text)
+    __aeabi_idiv                             0x000001a5   Thumb Code     0  idiv.o(.text)
+    __aeabi_idivmod                          0x000001a5   Thumb Code    40  idiv.o(.text)
+    __aeabi_dmul                             0x000001cd   Thumb Code   202  dmul.o(.text)
+    __aeabi_i2d                              0x0000029d   Thumb Code    34  dflti.o(.text)
+    __aeabi_d2iz                             0x000002c5   Thumb Code    62  dfixi.o(.text)
+    __aeabi_d2uiz                            0x0000030d   Thumb Code    50  dfixui.o(.text)
+    __aeabi_llsr                             0x00000349   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x00000349   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x0000036b   Thumb Code     0  iusefp.o(.text)
+    _double_round                            0x0000036b   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x00000385   Thumb Code   164  depilogue.o(.text)
+    __scatterload                            0x00000429   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000429   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x0000044d   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x0000044d   Thumb Code     0  llshl.o(.text)
+    __decompress                             0x0000046d   Thumb Code     0  __dclz77c.o(.text)
+    __decompress2                            0x0000046d   Thumb Code    96  __dclz77c.o(.text)
+    AFIO_GPxConfig                           0x000004cd   Thumb Code    82  ht32f5xxxx_gpio.o(i.AFIO_GPxConfig)
+    Buzzer_Fun2                              0x00000525   Thumb Code    34  main.o(i.Buzzer_Fun2)
+    Buzzer_Init                              0x00000549   Thumb Code   130  buzzer_pwm.o(i.Buzzer_Init)
+    Buzzer_IsFinish                          0x000005d9   Thumb Code    16  buzzer_pwm.o(i.Buzzer_IsFinish)
+    Buzzer_Start                             0x000005ed   Thumb Code   126  buzzer_pwm.o(i.Buzzer_Start)
+    CKCU_PeripClockConfig                    0x00000679   Thumb Code    34  ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig)
+    Delay                                    0x000006a1   Thumb Code    40  main.o(i.Delay)
+    HardFault_Handler                        0x000006cd   Thumb Code    10  ht32f5xxxx_01_it.o(i.HardFault_Handler)
+    MCTM0_IRQHandler                         0x000006dd   Thumb Code    96  buzzer_pwm.o(i.MCTM0_IRQHandler)
+    MCTM_CHMOECmd                            0x00000745   Thumb Code    18  ht32f5xxxx_mctm.o(i.MCTM_CHMOECmd)
+    NMI_Handler                              0x00000757   Thumb Code     2  ht32f5xxxx_01_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x00000759   Thumb Code     2  ht32f5xxxx_01_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x0000075b   Thumb Code     2  ht32f5xxxx_01_it.o(i.SVC_Handler)
+    SYSTICK_ClockSourceConfig                0x0000075d   Thumb Code    20  ht32_cm0plus_misc.o(i.SYSTICK_ClockSourceConfig)
+    SYSTICK_CounterCmd                       0x00000775   Thumb Code    32  ht32_cm0plus_misc.o(i.SYSTICK_CounterCmd)
+    SYSTICK_IntConfig                        0x00000799   Thumb Code    20  ht32_cm0plus_misc.o(i.SYSTICK_IntConfig)
+    SYSTICK_SetReloadValue                   0x000007b1   Thumb Code     6  ht32_cm0plus_misc.o(i.SYSTICK_SetReloadValue)
+    SysTick_Handler                          0x000007bd   Thumb Code     8  main.o(i.SysTick_Handler)
+    SystemInit                               0x000007c5   Thumb Code   232  system_ht32f5xxxx_01.o(i.SystemInit)
+    TM_ChannelConfig                         0x000008c1   Thumb Code    24  ht32f5xxxx_tm.o(i.TM_ChannelConfig)
+    TM_ClearFlag                             0x000008d9   Thumb Code    10  ht32f5xxxx_tm.o(i.TM_ClearFlag)
+    TM_Cmd                                   0x000008e3   Thumb Code    20  ht32f5xxxx_tm.o(i.TM_Cmd)
+    TM_IntConfig                             0x000008f7   Thumb Code    16  ht32f5xxxx_tm.o(i.TM_IntConfig)
+    TM_OutputInit                            0x00000909   Thumb Code   156  ht32f5xxxx_tm.o(i.TM_OutputInit)
+    TM_SetCaptureCompare                     0x000009a9   Thumb Code    10  ht32f5xxxx_tm.o(i.TM_SetCaptureCompare)
+    TM_SetCounterReload                      0x000009b3   Thumb Code     6  ht32f5xxxx_tm.o(i.TM_SetCounterReload)
+    TM_TimeBaseInit                          0x000009b9   Thumb Code    58  ht32f5xxxx_tm.o(i.TM_TimeBaseInit)
+    TimingDelay                              0x000009f9   Thumb Code    16  main.o(i.TimingDelay)
+    __ARM_clz                                0x00000a0d   Thumb Code    46  depilogue.o(i.__ARM_clz)
+    __scatterload_copy                       0x00000a3b   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000a49   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000a4b   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x00000a59   Thumb Code    50  main.o(i.main)
+    music                                    0x00000a91   Thumb Code   134  main.o(i.music)
+    music_2                                  0x00000b2d   Thumb Code   132  main.o(i.music_2)
+    Region$$Table$$Base                      0x00000bc8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000be8   Number         0  anon$$obj.o(Region$$Table)
+    tempo                                    0x20000000   Data           4  main.o(.data)
+    buzzer                                   0x20000004   Data           4  main.o(.data)
+    DelayTime                                0x2000000c   Data           4  main.o(.data)
+    thisNote                                 0x20000010   Data           4  main.o(.data)
+    melody                                   0x20000014   Data        1560  main.o(.data)
+    melody_2                                 0x2000062c   Data         496  main.o(.data)
+    gBee_Scale                               0x2000081c   Data          44  main.o(.data)
+    SystemCoreClock                          0x20000858   Data           4  system_ht32f5xxxx_01.o(.data)
+    __HT_check_sp                            0x20000860   Data           0  startup_ht32f5xxxx_01.o(STACK)
+    __initial_sp                             0x20000a60   Data           0  startup_ht32f5xxxx_01.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001444, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00000d14])
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000be8, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000164   Code   RO          359  * RESET               startup_ht32f5xxxx_01.o
+    0x00000164   0x00000000   Code   RO         3840  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x00000164   0x00000004   Code   RO         3855    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x00000168   0x00000004   Code   RO         3858    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x0000016c   0x00000000   Code   RO         3860    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x0000016c   0x00000000   Code   RO         3862    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x0000016c   0x00000008   Code   RO         3863    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x00000174   0x00000000   Code   RO         3865    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x00000174   0x00000000   Code   RO         3867    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x00000174   0x00000004   Code   RO         3856    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x00000178   0x0000002c   Code   RO         3843    .text               mc_p.l(uidiv.o)
+    0x000001a4   0x00000028   Code   RO         3845    .text               mc_p.l(idiv.o)
+    0x000001cc   0x000000d0   Code   RO         3847    .text               mf_p.l(dmul.o)
+    0x0000029c   0x00000028   Code   RO         3849    .text               mf_p.l(dflti.o)
+    0x000002c4   0x00000048   Code   RO         3851    .text               mf_p.l(dfixi.o)
+    0x0000030c   0x0000003c   Code   RO         3853    .text               mf_p.l(dfixui.o)
+    0x00000348   0x00000022   Code   RO         3869    .text               mc_p.l(llushr.o)
+    0x0000036a   0x00000000   Code   RO         3871    .text               mc_p.l(iusefp.o)
+    0x0000036a   0x000000be   Code   RO         3872    .text               mf_p.l(depilogue.o)
+    0x00000428   0x00000024   Code   RO         3876    .text               mc_p.l(init.o)
+    0x0000044c   0x00000020   Code   RO         3878    .text               mc_p.l(llshl.o)
+    0x0000046c   0x00000060   Code   RO         3888    .text               mc_p.l(__dclz77c.o)
+    0x000004cc   0x00000058   Code   RO         1326    i.AFIO_GPxConfig    ht32f5xxxx_gpio.o
+    0x00000524   0x00000022   Code   RO            4    i.Buzzer_Fun2       main.o
+    0x00000546   0x00000002   PAD
+    0x00000548   0x00000090   Code   RO          281    i.Buzzer_Init       buzzer_pwm.o
+    0x000005d8   0x00000014   Code   RO          282    i.Buzzer_IsFinish   buzzer_pwm.o
+    0x000005ec   0x0000008c   Code   RO          283    i.Buzzer_Start      buzzer_pwm.o
+    0x00000678   0x00000028   Code   RO          768    i.CKCU_PeripClockConfig  ht32f5xxxx_ckcu.o
+    0x000006a0   0x0000002c   Code   RO            6    i.Delay             main.o
+    0x000006cc   0x00000010   Code   RO          242    i.HardFault_Handler  ht32f5xxxx_01_it.o
+    0x000006dc   0x00000068   Code   RO          284    i.MCTM0_IRQHandler  buzzer_pwm.o
+    0x00000744   0x00000012   Code   RO         1750    i.MCTM_CHMOECmd     ht32f5xxxx_mctm.o
+    0x00000756   0x00000002   Code   RO          243    i.NMI_Handler       ht32f5xxxx_01_it.o
+    0x00000758   0x00000002   Code   RO          244    i.PendSV_Handler    ht32f5xxxx_01_it.o
+    0x0000075a   0x00000002   Code   RO          245    i.SVC_Handler       ht32f5xxxx_01_it.o
+    0x0000075c   0x00000018   Code   RO          458    i.SYSTICK_ClockSourceConfig  ht32_cm0plus_misc.o
+    0x00000774   0x00000024   Code   RO          459    i.SYSTICK_CounterCmd  ht32_cm0plus_misc.o
+    0x00000798   0x00000018   Code   RO          460    i.SYSTICK_IntConfig  ht32_cm0plus_misc.o
+    0x000007b0   0x0000000c   Code   RO          461    i.SYSTICK_SetReloadValue  ht32_cm0plus_misc.o
+    0x000007bc   0x00000008   Code   RO            7    i.SysTick_Handler   main.o
+    0x000007c4   0x000000fc   Code   RO          325    i.SystemInit        system_ht32f5xxxx_01.o
+    0x000008c0   0x00000018   Code   RO         2488    i.TM_ChannelConfig  ht32f5xxxx_tm.o
+    0x000008d8   0x0000000a   Code   RO         2489    i.TM_ClearFlag      ht32f5xxxx_tm.o
+    0x000008e2   0x00000014   Code   RO         2492    i.TM_Cmd            ht32f5xxxx_tm.o
+    0x000008f6   0x00000010   Code   RO         2505    i.TM_IntConfig      ht32f5xxxx_tm.o
+    0x00000906   0x00000002   PAD
+    0x00000908   0x000000a0   Code   RO         2509    i.TM_OutputInit     ht32f5xxxx_tm.o
+    0x000009a8   0x0000000a   Code   RO         2516    i.TM_SetCaptureCompare  ht32f5xxxx_tm.o
+    0x000009b2   0x00000006   Code   RO         2518    i.TM_SetCounterReload  ht32f5xxxx_tm.o
+    0x000009b8   0x00000040   Code   RO         2523    i.TM_TimeBaseInit   ht32f5xxxx_tm.o
+    0x000009f8   0x00000014   Code   RO            8    i.TimingDelay       main.o
+    0x00000a0c   0x0000002e   Code   RO         3874    i.__ARM_clz         mf_p.l(depilogue.o)
+    0x00000a3a   0x0000000e   Code   RO         3882    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00000a48   0x00000002   Code   RO         3883    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00000a4a   0x0000000e   Code   RO         3884    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00000a58   0x00000038   Code   RO            9    i.main              main.o
+    0x00000a90   0x0000009c   Code   RO           10    i.music             main.o
+    0x00000b2c   0x0000009c   Code   RO           11    i.music_2           main.o
+    0x00000bc8   0x00000020   Data   RO         3880    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x0000085c, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x0000012c])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000848   Data   RW           12    .data               main.o
+    0x20000848   0x00000004   Data   RW          246    .data               ht32f5xxxx_01_it.o
+    0x2000084c   0x0000000c   Data   RW          285    .data               buzzer_pwm.o
+    0x20000858   0x00000004   Data   RW          326    .data               system_ht32f5xxxx_01.o
+
+
+    Execution Region ER_ZI (Base: 0x2000085c, Size: 0x00000204, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x2000085c   0x00000004   PAD
+    0x20000860   0x00000200   Zero   RW          357    STACK               startup_ht32f5xxxx_01.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       408         40          0         12          0       8482   buzzer_pwm.o
+        96         18          0          0          0       2234   ht32_cm0plus_misc.o
+        22          6          0          4          0       1573   ht32f5xxxx_01_it.o
+        40          6          0          0          0       7296   ht32f5xxxx_ckcu.o
+        88          6          0          0          0       6464   ht32f5xxxx_gpio.o
+        18          0          0          0          0      13652   ht32f5xxxx_mctm.o
+       310         10          0          0          0       6355   ht32f5xxxx_tm.o
+       474         60          0       2120          0      45352   main.o
+       356        238          0          0        512        664   startup_ht32f5xxxx_01.o
+       252         20          0          4          0       1787   system_ht32f5xxxx_01.o
+
+    ----------------------------------------------------------------------
+      2068        404         32       2140        516      93859   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         4          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        96          0          0          0          0          0   __dclz77c.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        40          0          0          0          0         72   idiv.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        32          0          0          0          0         68   llshl.o
+        34          0          0          0          0         68   llushr.o
+        44          0          0          0          0         72   uidiv.o
+       236          0          0          0          0        216   depilogue.o
+        72         10          0          0          0         72   dfixi.o
+        60         10          0          0          0         68   dfixui.o
+        40          6          0          0          0         68   dflti.o
+       208          6          0          0          0         88   dmul.o
+
+    ----------------------------------------------------------------------
+       948         48          0          0          0        860   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       332         16          0          0          0        348   mc_p.l
+       616         32          0          0          0        512   mf_p.l
+
+    ----------------------------------------------------------------------
+       948         48          0          0          0        860   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3016        452         32       2140        516      93403   Grand Totals
+      3016        452         32        300        516      93403   ELF Image Totals (compressed)
+      3016        452         32        300          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3048 (   2.98kB)
+    Total RW  Size (RW Data + ZI Data)              2656 (   2.59kB)
+    Total ROM Size (Code + RO Data + RW Data)       3348 (   3.27kB)
+
+==============================================================================
+
