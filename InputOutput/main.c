@@ -81,8 +81,13 @@ s32 gTimeCount;
 vu32 DelayTime;
 ////////////////////////////////
 vu32 guKeyState[3];
-
+int value_sum;
 ////////////////////////////////
+
+int sum(int a,int b)
+	{
+		return a + b;
+	}
 
 void Delay(u32 nTime)
 {
@@ -303,11 +308,13 @@ int main(void)
 	
 		PWM_Init();
 	PWM_Cmd(ENABLE);
+	//sum (20,3);
+	printf("value:%d",sum(20,10));
   /* Infinite loop to read data from input pin and then output to LED                                       */
   while (1)
   {
 		
-		//led_button();
+		led_button();
 		UxART_RxTest();
 		Key_Process();
 
@@ -387,7 +394,7 @@ void BFTM1_IRQHandler(void)
   if (gADC_SingleEndOfConversion)
     {
       //printf("\rPotentiometer level is %04d\n", (int)gPotentiometerLevel);
-			printf("value_i:%d\n", i);
+			//printf("value_i:%d\n", i);
 			
     }
 	check_key2 = GPIO_ReadInBit(HTCFG_WAKE, HTCFG_INPUT_WAKE_GPIO_PIN);
@@ -429,14 +436,14 @@ void BFTM1_IRQHandler(void)
 //  GPIO_WriteOutBits(HTCFG_LED1, HTCFG_OUTPUT_LED1_GPIO_PIN, tmp);
 
   /* Read KEY2 and then output to LED3                                                                      */
-  check_key0 = GPIO_ReadInBit(HTCFG_KEY2, HTCFG_INPUT_KEY2_GPIO_PIN);
+  check_key0 = GPIO_ReadInBit(HT_GPIOC, GPIO_PIN_10);
 	if (check_key0 == 0 && flag_b1 == 0)
 	{
-		GPIO_WriteOutBits(HTCFG_LED2, HTCFG_OUTPUT_LED2_GPIO_PIN, RESET);
+		GPIO_WriteOutBits(HT_GPIOB, GPIO_PIN_15, RESET);	
 	}
 	else if (check_key0 == 1 && flag_b1 == 0)
 	{
-		GPIO_WriteOutBits(HTCFG_LED2, HTCFG_OUTPUT_LED2_GPIO_PIN, SET);
+		GPIO_WriteOutBits(HT_GPIOB, GPIO_PIN_15, SET);	
 	}
 
 }
@@ -454,7 +461,7 @@ void BFTM_Configuration_1(void)
   }
 
   /* BFTM as Repetitive mode, every 0.2 second to trigger the match interrupt                               */
-  BFTM_SetCompare(HT_BFTM0, SystemCoreClock / 5);
+  BFTM_SetCompare(HT_BFTM0, SystemCoreClock / 10);
   BFTM_SetCounter(HT_BFTM0, 0);
   BFTM_IntConfig(HT_BFTM0, ENABLE);
   BFTM_EnaCmd(HT_BFTM0, ENABLE);
@@ -475,7 +482,7 @@ void BFTM_Configuration_2(void)
   }
 
   /* BFTM as Repetitive mode, every 0.5 second to trigger the match interrupt                               */
-  BFTM_SetCompare(HT_BFTM1, SystemCoreClock / 2);
+  BFTM_SetCompare(HT_BFTM1, SystemCoreClock / 4);
   BFTM_SetCounter(HT_BFTM1, 0);
   BFTM_IntConfig(HT_BFTM1, ENABLE);
   BFTM_EnaCmd(HT_BFTM1, ENABLE);
@@ -576,7 +583,8 @@ void GPIO_IN_Configuration(void)
 {
   /* Configure WAKEUP, KEY1, KEY2 pins as the input function                                                */
   /* Configure AFIO mode of input pins                                                                      */
-  AFIO_GPxConfig(HTCFG_INPUT_WAKE_ID, HTCFG_INPUT_WAKE_AFIO_PIN, AFIO_FUN_GPIO);
+  AFIO_GPxConfig(GPIO_PC,AFIO_PIN_10,AFIO_FUN_GPIO);
+	AFIO_GPxConfig(HTCFG_INPUT_WAKE_ID, HTCFG_INPUT_WAKE_AFIO_PIN, AFIO_FUN_GPIO);
   AFIO_GPxConfig(HTCFG_INPUT_KEY1_ID, HTCFG_INPUT_KEY1_AFIO_PIN, AFIO_FUN_GPIO);
   AFIO_GPxConfig(HTCFG_INPUT_KEY2_ID, HTCFG_INPUT_KEY2_AFIO_PIN, AFIO_FUN_GPIO);
 
@@ -584,13 +592,16 @@ void GPIO_IN_Configuration(void)
   GPIO_DirectionConfig(HTCFG_WAKE, HTCFG_INPUT_WAKE_GPIO_PIN, GPIO_DIR_IN);
   GPIO_DirectionConfig(HTCFG_KEY1, HTCFG_INPUT_KEY1_GPIO_PIN, GPIO_DIR_IN);
   GPIO_DirectionConfig(HTCFG_KEY2, HTCFG_INPUT_KEY2_GPIO_PIN, GPIO_DIR_IN);
+	GPIO_DirectionConfig(HT_GPIOC,GPIO_PIN_10,GPIO_DIR_IN);
 
   /* Configure GPIO pull resistor of input pins                                                             */
   GPIO_PullResistorConfig(HTCFG_WAKE, HTCFG_INPUT_WAKE_GPIO_PIN, GPIO_PR_DISABLE);
   GPIO_PullResistorConfig(HTCFG_KEY1, HTCFG_INPUT_KEY1_GPIO_PIN, GPIO_PR_DISABLE);
   GPIO_PullResistorConfig(HTCFG_KEY2, HTCFG_INPUT_KEY2_GPIO_PIN, GPIO_PR_DISABLE);
-
-  GPIO_InputConfig(HTCFG_WAKE, HTCFG_INPUT_WAKE_GPIO_PIN, ENABLE);
+	GPIO_PullResistorConfig(HT_GPIOC, GPIO_PIN_10, GPIO_PR_DISABLE);
+  
+	GPIO_InputConfig(HT_GPIOC, GPIO_PIN_10, ENABLE);
+	GPIO_InputConfig(HTCFG_WAKE, HTCFG_INPUT_WAKE_GPIO_PIN, ENABLE);
   GPIO_InputConfig(HTCFG_KEY1, HTCFG_INPUT_KEY1_GPIO_PIN, ENABLE);
   GPIO_InputConfig(HTCFG_KEY2, HTCFG_INPUT_KEY2_GPIO_PIN, ENABLE);
 }
@@ -604,11 +615,14 @@ void GPIO_OUT_Configuration(void)
 {
   /* Configure LED1, LED2, LED3 pins as output function                                                     */
   /* Configure AFIO mode of output pins                                                                     */
+	AFIO_GPxConfig(GPIO_PB,AFIO_PIN_15,AFIO_FUN_GPIO);
   AFIO_GPxConfig(HTCFG_OUTPUT_LED0_ID, HTCFG_OUTPUT_LED0_AFIO_PIN, AFIO_FUN_GPIO);
   AFIO_GPxConfig(HTCFG_OUTPUT_LED1_ID, HTCFG_OUTPUT_LED1_AFIO_PIN, AFIO_FUN_GPIO);
   AFIO_GPxConfig(HTCFG_OUTPUT_LED2_ID, HTCFG_OUTPUT_LED2_AFIO_PIN, AFIO_FUN_GPIO);
 
-  /* Configure GPIO direction of output pins                                                                */
+  /* Configure GPIO direction of output pins 
+	*/
+	GPIO_DirectionConfig(HT_GPIOB,GPIO_PIN_15,GPIO_DIR_OUT);
   GPIO_DirectionConfig(HTCFG_LED0, HTCFG_OUTPUT_LED0_GPIO_PIN, GPIO_DIR_OUT);
   GPIO_DirectionConfig(HTCFG_LED1, HTCFG_OUTPUT_LED1_GPIO_PIN, GPIO_DIR_OUT);
   GPIO_DirectionConfig(HTCFG_LED2, HTCFG_OUTPUT_LED2_GPIO_PIN, GPIO_DIR_OUT);
