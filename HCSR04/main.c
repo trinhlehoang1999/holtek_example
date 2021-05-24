@@ -386,7 +386,7 @@ void BFTM_Configuration(void)
   BFTM_SetCompare(HT_BFTM0, SystemCoreClock / 100000);
   BFTM_SetCounter(HT_BFTM0, 0);
   BFTM_IntConfig(HT_BFTM0, ENABLE);
-  BFTM_EnaCmd(HT_BFTM0, ENABLE);
+  BFTM_EnaCmd(HT_BFTM0, DISABLE);
 
   NVIC_EnableIRQ(BFTM0_IRQn);
 }
@@ -556,12 +556,14 @@ void EXTI4_15_IRQHandler(void)
 {
 	  if (EXTI_GetEdgeStatus(HTCFG_WAKE_EXTI_CH,EXTI_EDGE_POSITIVE))
   {
+	  BFTM_EnaCmd(HT_BFTM0, ENABLE);
     EXTI_ClearEdgeFlag(HTCFG_WAKE_EXTI_CH);
 
 		flag_echo[0] = 1;
   } 
 	else
 		{
+			BFTM_EnaCmd(HT_BFTM0, DISABLE);
 			EXTI_ClearEdgeFlag(HTCFG_WAKE_EXTI_CH);
 			flag_echo[0] = 0;
 		}
@@ -577,6 +579,7 @@ void BFTM0_IRQHandler(void)
 	
   BFTM_ClearFlag(HT_BFTM0);
 	//HT32F_DVB_LEDToggle(HT_LED2);
+
 		if(flag_echo [0] == 1)
 		{
 			cnt++;     

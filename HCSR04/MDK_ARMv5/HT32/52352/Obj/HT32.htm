@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HT32\52352\Obj\HT32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HT32\52352\Obj\HT32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed May 19 21:50:49 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Sun May 23 09:04:25 2021
 <BR><P>
 <H3>Maximum Stack Usage =        100 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -399,7 +399,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[4f]"></a>BFTM_EnaCmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_EnaCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Configuration_1
+<BR><BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_15_IRQHandler
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Configuration_1
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Configuration
 </UL>
 
@@ -471,11 +472,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
-<P><STRONG><a name="[c]"></a>EXTI4_15_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, main.o(i.EXTI4_15_IRQHandler))
+<P><STRONG><a name="[c]"></a>EXTI4_15_IRQHandler</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, main.o(i.EXTI4_15_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EXTI4_15_IRQHandler &rArr; EXTI_GetEdgeStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetEdgeStatus
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearEdgeFlag
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_EnaCmd
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
