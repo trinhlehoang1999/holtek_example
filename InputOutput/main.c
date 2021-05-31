@@ -461,7 +461,7 @@ void BFTM_Configuration_1(void)
   }
 
   /* BFTM as Repetitive mode, every 0.2 second to trigger the match interrupt                               */
-  BFTM_SetCompare(HT_BFTM0, SystemCoreClock / 10);
+  BFTM_SetCompare(HT_BFTM0, SystemCoreClock / 5);
   BFTM_SetCounter(HT_BFTM0, 0);
   BFTM_IntConfig(HT_BFTM0, ENABLE);
   BFTM_EnaCmd(HT_BFTM0, ENABLE);
@@ -482,7 +482,7 @@ void BFTM_Configuration_2(void)
   }
 
   /* BFTM as Repetitive mode, every 0.5 second to trigger the match interrupt                               */
-  BFTM_SetCompare(HT_BFTM1, SystemCoreClock / 4);
+  BFTM_SetCompare(HT_BFTM1, SystemCoreClock / 2);
   BFTM_SetCounter(HT_BFTM1, 0);
   BFTM_IntConfig(HT_BFTM1, ENABLE);
   BFTM_EnaCmd(HT_BFTM1, ENABLE);
